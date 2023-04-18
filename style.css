@@ -6,13 +6,15 @@
 
 :root {
   font-size: 62.5%;
+
+  --ff-primary: "Roboto", sans-serif;
   --bg-color: black;
-  --hsl: 193;
-  --tc-header: hsla(var(--hsl), 72%, 13%, 1);
-  --tc-primary: hsla(var(--hsl), 61%, 6%, 0.5);
-  --tc-secondary: hsla(var(--hsl), 31%, 42%, 1);
-  --input-color: hsla(var(--hsl), 65%, 7%, 1);
-  --but-color: hsla(var(--hsl), 91%, 25%, 1);
+  --hue: 193;
+  --tc-header: hsla(var(--hue), 80%, 15%, 1);
+  --tc-primary: hsla(var(--hue), 61%, 6%, 0.5);
+  --tc-secondary: hsla(var(--hue), 65%, 10%, 1);
+  --input-color: hsla(var(--hue), 65%, 7%, 1);
+  --but-color: hsla(var(--hue), 91%, 30%, 1);
   --tt-color: #e1e1e6;
   --remove-color: #f75a68;
   --not-fav: #4e5455;
@@ -21,5 +23,152 @@
 
 body {
   font-size: 1.6rem;
-  background-color: #e1e1e6;
+  background-color: black;
+}
+
+body * {
+  font-family: var(--ff-primary);
+  color: var(--tt-color);
+}
+
+#app {
+  padding: 2rem;
+  max-width: 112rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10rem 0 8.5rem;
+}
+
+.search-box {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.search-box input {
+  width: 46rem;
+  background-color: var(--input-color);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.6rem;
+}
+
+.search-box input:focus {
+  outline: 1px solid #4a808c;
+}
+
+.search-box button {
+  padding: 1.2rem 3.2rem;
+  background-color: var(--but-color);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.search-box button:hover {
+  background-color: #065e7c;
+}
+/*Screen Reader only*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+table {
+  border: 1px solid #4a808c;
+  border-radius: 1.2rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table * {
+  line-height: 160%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+table th {
+  background-color: var(--tc-header);
+  font-size: 2rem;
+  line-height: 160%;
+  padding: 1.6rem 4rem;
+  text-align: left;
+}
+
+table th:first-child {
+  border-top-left-radius: 1.2rem;
+  width: 50%;
+}
+
+table th:last-child {
+  border-top-right-radius: 1.2rem;
+}
+
+table td {
+  padding: 1.6rem 4rem;
+  text-align: left;
+}
+
+table tr:nth-child(odd) {
+  background-color: var(--tc-primary);
+  border-bottom: 1px solid #4a808c;
+}
+
+table tr:nth-child(even) {
+  background-color: var(--tc-secondary);
+  border-bottom: 1px solid #2d4e55;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  margin-bottom: 0.4rem;
+}
+
+td.user a span {
+  font-weight: 400;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td .remove-button {
+  color: var(--remove-color);
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+td .remove-button:hover {
+  border-bottom: 1px solid var(--remove-color);
 }
