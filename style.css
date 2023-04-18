@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --bg-color: black;
+  --hsl: 193;
+  --tc-header: hsla(var(--hsl), 72%, 13%, 1);
+  --tc-primary: hsla(var(--hsl), 61%, 6%, 0.5);
+  --tc-secondary: hsla(var(--hsl), 31%, 42%, 1);
+  --input-color: hsla(var(--hsl), 65%, 7%, 1);
+  --but-color: hsla(var(--hsl), 91%, 25%, 1);
+  --tt-color: #e1e1e6;
+  --remove-color: #f75a68;
+  --not-fav: #4e5455;
+  --text-color: #ffffff;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #e1e1e6;
+}
