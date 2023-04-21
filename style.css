@@ -50,7 +50,7 @@ header {
 }
 
 .search-box input {
-  width: 46rem;
+  width: clamp(30rem, 50%, 40rem);
   background-color: var(--input-color);
   border: none;
   border-radius: 0.5rem;
@@ -93,8 +93,8 @@ header {
 
 table {
   border: 1px solid #4a808c;
-  border-radius: 1.2rem;
   border-collapse: collapse;
+  border-radius: 1.2rem;
   width: 100%;
 }
 
